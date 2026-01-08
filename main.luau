@@ -26,6 +26,6 @@ loadstring(game:HttpGet("https://api.junkie-development.de/api/v1/luascripts/pub
 --// Blind Shoot -- 118614517739521 -- emresozer -- google
 elseif game.PlaceId == 118614517739521 then
 loadstring(game:HttpGet("https://api.junkie-development.de/api/v1/luascripts/public/e2c7c5181eadeb1c13964126b82a73f2a5d9745cbbc4a60bb156f0bb0be2e327/download"))()
-else then
+else
     print("dady")
 end
