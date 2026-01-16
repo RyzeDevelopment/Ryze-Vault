@@ -5952,6 +5952,7 @@ function Library:CreateWindow(WindowInfo)
 		--// Top Bar \\-
 		local TopBar = New("Frame", {
 			BackgroundTransparency = 1,
+			Position = UDim2.new(0, 75, 0, 0),
 			Size = UDim2.new(1, 0, 0, 48),
 			Parent = MainFrame,
 		})
@@ -5960,7 +5961,7 @@ function Library:CreateWindow(WindowInfo)
 		--// Title
 		TitleHolder = New("Frame", {
 			BackgroundTransparency = 1,
-			Size = UDim2.new(0, 46, 1, 0),
+			Size = UDim2.new(0, -40, 1, 0),
 			Parent = TopBar,
 		})
 		New("UIListLayout", {
@@ -5971,21 +5972,23 @@ function Library:CreateWindow(WindowInfo)
 			Parent = TitleHolder,
 		})
 
-		local function resolveIcon(icon)
-			if typeof(icon) == "number" then
-				return "rbxassetid://" .. icon
-			elseif typeof(icon) == "string" then
-				-- rbxasset veya http(s) raw link
-				return icon
-			end
-			return nil
-		end
-
 		if WindowInfo.Icon then
+			local imageId
+
+			if tonumber(WindowInfo.Icon) then
+				imageId = "rbxassetid://" .. WindowInfo.Icon
+			else
+				imageId = WindowInfo.Icon
+			end
+
 			WindowIcon = New("ImageLabel", {
-				Image = resolveIcon(WindowInfo.Icon),
-				Size = WindowInfo.IconSize,
+				Image = imageId,
+				Size = UDim2.fromOffset(100, 100),
+				Position = UDim2.fromScale(100, 0),
 				BackgroundTransparency = 1,
+				ImageTransparency = 0,
+				ScaleType = Enum.ScaleType.Fit,
+				ZIndex = 999999,
 				Parent = TitleHolder,
 			})
 		else
@@ -5994,11 +5997,10 @@ function Library:CreateWindow(WindowInfo)
 				Size = WindowInfo.IconSize,
 				Text = WindowInfo.Title:sub(1, 1),
 				TextScaled = true,
-				Visible = true,
+				Visible = false,
 				Parent = TitleHolder,
 			})
 		end
-
 
 		local X = Library:GetTextBounds(
 			WindowInfo.Title,
