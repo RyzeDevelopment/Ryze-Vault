@@ -6212,7 +6212,7 @@ function Library:CreateWindow(WindowInfo)
 			AutomaticCanvasSize = Enum.AutomaticSize.Y,
 			BackgroundColor3 = Color3.fromRGB(13, 13, 13),
 			CanvasSize = UDim2.fromScale(0, 0),
-			Position = UDim2.fromOffset(0, 189),
+			Position = UDim2.fromOffset(0, 145),
 			ScrollBarThickness = 0,
 			Size = UDim2.new(0, 46, 1, -280),
 			Parent = MainFrame,
