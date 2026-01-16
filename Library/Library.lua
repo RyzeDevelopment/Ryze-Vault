@@ -6282,7 +6282,7 @@ function Library:CreateWindow(WindowInfo)
 
         TitleHolder.Size = UDim2.new(0, Width, 1, 0)
         RightWrapper.Size = UDim2.new(1, -Width - 57 - 1, 1, -16)
-        Tabs.Size = UDim2.new(0, Width, 1, -70)
+        Tabs.Size = UDim2.new(0, 46, 1, -70)
         Container.Size = UDim2.new(1, -Width - 1, 1, -70)
 
         if WindowInfo.EnableCompacting then
