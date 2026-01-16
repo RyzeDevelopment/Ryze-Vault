@@ -301,7 +301,7 @@ local Templates = {
         EnableCompacting = true,
         DisableCompactingSnap = false,
         SidebarCompacted = false,
-        MinContainerWidth = 256,
+        MinContainerWidth = 128,
 
         --// Snapping \\--
         MinSidebarWidth = 128,
