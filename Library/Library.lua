@@ -301,10 +301,10 @@ local Templates = {
         EnableCompacting = true,
         DisableCompactingSnap = false,
         SidebarCompacted = false,
-        MinContainerWidth = 128,
+        MinContainerWidth = 256,
 
         --// Snapping \\--
-        MinSidebarWidth = 128,
+        MinSidebarWidth = 32,
         SidebarCompactWidth = 48,
         SidebarCollapseThreshold = 0.5,
 
@@ -1582,7 +1582,7 @@ function Library:AddDraggableMenu(Name: string)
     local Container = New("Frame", {
         BackgroundTransparency = 1,
         Position = UDim2.fromOffset(0, 35),
-        Size = UDim2.new(1, 0, 1, -15),
+        Size = UDim2.new(1, 0, 1, -35),
         Parent = Holder,
     })
     New("UIListLayout", {
