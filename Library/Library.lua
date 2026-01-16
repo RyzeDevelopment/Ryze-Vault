@@ -5952,7 +5952,7 @@ function Library:CreateWindow(WindowInfo)
 		--// Top Bar \\-
 		local TopBar = New("Frame", {
 			BackgroundTransparency = 1,
-			Position = UDim2.new(0, 75, 0, 0),
+			Position = UDim2.new(0, 0, 0, 0),
 			Size = UDim2.new(1, 0, 0, 48),
 			Parent = MainFrame,
 		})
@@ -5961,6 +5961,7 @@ function Library:CreateWindow(WindowInfo)
 		--// Title
 		TitleHolder = New("Frame", {
 			BackgroundTransparency = 1,
+			Position = UDim2.new(0, 75, 0, 0),
 			Size = UDim2.new(0, -40, 1, 0),
 			Parent = TopBar,
 		})
