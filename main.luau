@@ -26,6 +26,9 @@ loadstring(game:HttpGet("https://api.junkie-development.de/api/v1/luascripts/pub
 --// Blind Shoot -- 118614517739521 -- emresozer -- google
 elseif game.PlaceId == 118614517739521 then
 loadstring(game:HttpGet("https://api.junkie-development.de/api/v1/luascripts/public/e2c7c5181eadeb1c13964126b82a73f2a5d9745cbbc4a60bb156f0bb0be2e327/download"))()
+--// Chop Your Tree -- 123557829667240 -- zerai -- google
+elseif game.PlaceId == 123557829667240 then
+loadstring(game:HttpGet("https://api.jnkie.com/api/v1/luascripts/public/ea891ca4d70c89ef201978a9bd84424176f55a70225717d3e865cec54c2c1f37/download"))()
 else
     print("dady")
 end
